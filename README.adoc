@@ -1,0 +1,3 @@
+= Ionic + Spring Boot Example
+
+> Generated with JHipster 7.8.0 and JHipster Ionic 7.5.0
