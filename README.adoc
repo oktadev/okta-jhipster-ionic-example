@@ -1,3 +1,3 @@
 = Ionic and Spring Boot Example
 
-> Built with JHipster 7.8.0 and JHipster Ionic 7.5.0
+> Built with JHipster 7.8.1 and JHipster Ionic 7.5.0
