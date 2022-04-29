@@ -1,5 +1,5 @@
 import { LoginPage } from '../support/pages/login.po';
-import { adminUsername, adminPassword, userUsername, userPassword } from '../support/config';
+import { ADMIN_USERNAME, ADMIN_PASSWORD, USER_USERNAME, USER_PASSWORD } from '../support/config';
 
 describe('Login', () => {
   const loginPage = new LoginPage();
@@ -14,33 +14,16 @@ describe('Login', () => {
   });
 
   // Incompatible with oauth login by api
-  it.skip('should fail to login with bad password', () => {
+  it('should login successfully with admin account', () => {
+    cy.login(ADMIN_USERNAME, ADMIN_PASSWORD);
     cy.visit('/');
-    loginPage.signIn();
-    loginPage.login(adminUsername, 'foo');
-    // Keycloak
-    const alert = cy.get('#input-error');
-    if (alert) {
-      alert.should('include.text', 'Invalid username or password.');
-    } else {
-      // Okta
-      const error = cy.get('.infobox-error');
-      error.should('include.text', 'Sign in failed!');
-    }
-  });
-
-  // Incompatible with oauth login by api
-  it.skip('should login successfully with admin account', () => {
-    cy.visit('/');
-    loginPage.signIn();
-    loginPage.login(adminUsername, adminPassword);
 
     const welcome = /Welcome, Admin/;
-    cy.get('ion-title').invoke('text').should('match', welcome);
+    cy.get('app-home ion-title').invoke('text').should('match', welcome);
   });
 
   it('should logout successfully', () => {
-    cy.login(userUsername, userPassword);
+    cy.login(USER_USERNAME, USER_PASSWORD);
     cy.visit('/');
     cy.get('#logout').should('exist');
     loginPage.logout();

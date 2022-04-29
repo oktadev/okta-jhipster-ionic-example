@@ -19,7 +19,7 @@ const getOauth2Data = () =>
       const { issuer, clientId } = info;
       return cy
         .request({
-          url: `${(issuer.endsWith('/')) ? issuer.substring(0, issuer.length - 1) : issuer}/.well-known/openid-configuration`,
+          url: `${issuer.replace(/\/$/, '')}/.well-known/openid-configuration`,
           followRedirect: false,
         })
         .then(({ body: configuration }) => ({

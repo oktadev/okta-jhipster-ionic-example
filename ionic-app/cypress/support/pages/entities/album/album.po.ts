@@ -1,11 +1,11 @@
 import { EntityComponentsPage, EntityDetailPage, EntityUpdatePage } from '../../entity.po';
 
 export class AlbumComponentsPage extends EntityComponentsPage {
-  pageSeletor = 'page-album';
+  pageSelector = 'page-album';
 }
 
 export class AlbumUpdatePage extends EntityUpdatePage {
-  pageSeletor = 'page-album-update';
+  pageSelector = 'page-album-update';
 
   setTitleInput(title: string) {
     this.setInputValue('title', title);
@@ -21,7 +21,7 @@ export class AlbumUpdatePage extends EntityUpdatePage {
 }
 
 export class AlbumDetailPage extends EntityDetailPage {
-  pageSeletor = 'page-album-detail';
+  pageSelector = 'page-album-detail';
 
   getTitleContent() {
     return cy.get('#title-content');

@@ -56,24 +56,22 @@
           </ion-button>
         </div>
       </ion-item>
-      <div *ngIf="!isNew">
-        <ion-item>
-          <ion-label position="floating">Height</ion-label>
-          <ion-input type="number" name="height" formControlName="height"></ion-input>
-        </ion-item>
-        <ion-item>
-          <ion-label position="floating">Width</ion-label>
-          <ion-input type="number" name="width" formControlName="width"></ion-input>
-        </ion-item>
-        <ion-item>
-          <ion-label>Taken</ion-label>
-          <ion-datetime displayFormat="MM/DD/YYYY HH:mm" formControlName="taken" id="field_taken"></ion-datetime>
-        </ion-item>
-        <ion-item>
-          <ion-label>Uploaded</ion-label>
-          <ion-datetime displayFormat="MM/DD/YYYY HH:mm" formControlName="uploaded" id="field_uploaded"></ion-datetime>
-        </ion-item>
-      </div>
+      <ion-item>
+        <ion-label position="floating">Height</ion-label>
+        <ion-input type="number" name="height" formControlName="height"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Width</ion-label>
+        <ion-input type="number" name="width" formControlName="width"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Taken</ion-label>
+        <ion-datetime displayFormat="MM/DD/YYYY HH:mm" formControlName="taken" id="field_taken"></ion-datetime>
+      </ion-item>
+      <ion-item>
+        <ion-label>Uploaded</ion-label>
+        <ion-datetime displayFormat="MM/DD/YYYY HH:mm" formControlName="uploaded" id="field_uploaded"></ion-datetime>
+      </ion-item>
       <ion-item>
         <ion-label>Album</ion-label>
         <ion-select id="field_album" formControlName="album" [compareWith]="compareAlbum">

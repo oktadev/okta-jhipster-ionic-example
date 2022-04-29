@@ -1,4 +1,4 @@
-import { userUsername, userPassword } from '../../../support/config';
+import { USER_USERNAME, USER_PASSWORD } from '../../../support/config';
 import { TagComponentsPage, TagDetailPage, TagUpdatePage } from '../../../support/pages/entities/tag/tag.po';
 import tagSample from './tag.json';
 
@@ -17,7 +17,7 @@ describe('Tag entity', () => {
 
   beforeEach(() => {
     tag = undefined;
-    cy.login(userUsername, userPassword);
+    cy.login(USER_USERNAME, USER_PASSWORD);
   });
 
   describe('navigation test', () => {

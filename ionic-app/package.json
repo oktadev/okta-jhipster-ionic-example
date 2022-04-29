@@ -14,7 +14,6 @@
     "e2e:ci": "ng run app:cypress-run --browser chrome",
     "lint": "ng lint",
     "ng": "ng",
-    "prepare": "husky install",
     "prettier": "prettier --write \"{,e2e/**/,src/**/}*.{js,json,html,md,ts,css,scss,yml}\" --loglevel silent",
     "start": "ionic serve",
     "test": "jest",

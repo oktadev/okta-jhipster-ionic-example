@@ -113,5 +113,5 @@ Desktop.ini
 .angular
 
 # ionic rules:
-cypress/screnshots
-cyresss/videos
+cypress/screenshots
+cypress/videos
