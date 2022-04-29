@@ -138,6 +138,14 @@ Cypress.Commands.add('oauthLogout', () => {
     });
 });
 
+Cypress.Commands.add('clearCache', () => {
+  cy.clearCookies();
+  cy.clearLocalStorage();
+  cy.window().then(win => {
+    win.sessionStorage.clear();
+  });
+});
+
 declare global {
   namespace Cypress {
     interface Chainable<Subject> {
@@ -147,6 +155,7 @@ declare global {
       auth0Login(oauth2Data: any, username: string, password: string): Cypress.Chainable;
       oktaLogin(oauth2Data: any, username: string, password: string): Cypress.Chainable;
       oauthLogout(): Cypress.Chainable;
+      clearCache(): Cypress.Chainable;
     }
   }
 }

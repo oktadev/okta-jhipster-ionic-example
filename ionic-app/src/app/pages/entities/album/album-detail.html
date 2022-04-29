@@ -3,7 +3,7 @@
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
-    <ion-title> Album </ion-title>
+    <ion-title>Album</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -12,25 +12,25 @@
     <ion-item>
       <ion-label position="fixed">ID</ion-label>
       <div item-content>
-        <span>{{album.id}}</span>
+        <span id="id-content">{{album.id}}</span>
       </div>
     </ion-item>
     <ion-item>
       <ion-label position="fixed">Title</ion-label>
       <div item-content>
-        <span>{{album.title}}</span>
+        <span id="title-content">{{album.title}}</span>
       </div>
     </ion-item>
     <ion-item>
       <ion-label position="fixed">Description</ion-label>
       <div item-content>
-        <span>{{album.description}}</span>
+        <span id="description-content">{{album.description}}</span>
       </div>
     </ion-item>
     <ion-item>
       <ion-label position="fixed">Created</ion-label>
       <div item-content>
-        <span>{{album.created | date:'medium'}}</span>
+        <span id="created-content">{{album.created | date:'medium'}}</span>
       </div>
     </ion-item>
     <ion-item>

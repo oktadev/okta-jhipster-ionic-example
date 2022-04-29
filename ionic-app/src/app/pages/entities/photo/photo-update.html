@@ -3,7 +3,7 @@
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
-    <ion-title> Photo </ion-title>
+    <ion-title>Photo</ion-title>
 
     <ion-buttons slot="end">
       <ion-button [disabled]="!isReadyToSave" (click)="save()" color="primary">
@@ -42,7 +42,14 @@
               <ion-icon name="trash" slot="icon-only"></ion-icon>
             </ion-button>
           </div>
-          <input type="file" #fileInput style="display: none" (change)="setFileData($event, 'image', true)" accept="image/*" />
+          <input
+            type="file"
+            data-cy="image"
+            #fileInput
+            style="display: none"
+            (change)="setFileData($event, 'image', true)"
+            accept="image/*"
+          />
           <ion-button *ngIf="!photo?.image" (click)="getPicture('image')">
             <ion-icon name="add-circle" slot="start"></ion-icon>
             {{ 'ITEM_CREATE_CHOOSE_IMAGE' | translate }}

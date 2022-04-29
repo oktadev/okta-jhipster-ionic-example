@@ -111,3 +111,7 @@ Desktop.ini
 # Angular
 ######################
 .angular
+
+# ionic rules:
+cypress/screnshots
+cyresss/videos

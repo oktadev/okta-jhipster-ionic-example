@@ -224,8 +224,8 @@ public class PhotoResource {
      */
     @GetMapping("/photos")
     public ResponseEntity<List<Photo>> getAllPhotos(
-        @org.springdoc.api.annotations.ParameterObject Pageable pageable,
-        @RequestParam(required = false, defaultValue = "true") boolean eagerload
+        Pageable pageable,
+        @RequestParam(required = false, defaultValue = "false") boolean eagerload
     ) {
         log.debug("REST request to get a page of Photos");
         Page<Photo> page;

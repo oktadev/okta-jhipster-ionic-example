@@ -1,22 +1,21 @@
 import { AnyAction, configureStore, ThunkAction } from '@reduxjs/toolkit';
 import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux';
-import { loadingBarMiddleware } from 'react-redux-loading-bar';
 
-import sharedReducers from 'app/shared/reducers';
+import reducer from 'app/shared/reducers';
 import errorMiddleware from './error-middleware';
 import notificationMiddleware from './notification-middleware';
 import loggerMiddleware from './logger-middleware';
-import translationMiddleware from './translation-middleware';
+import { loadingBarMiddleware } from 'react-redux-loading-bar';
 
 const store = configureStore({
-  reducer: sharedReducers,
+  reducer,
   middleware: getDefaultMiddleware =>
     getDefaultMiddleware({
       serializableCheck: {
         // Ignore these field paths in all actions
         ignoredActionPaths: ['payload.config', 'payload.request', 'error', 'meta.arg'],
       },
-    }).concat(errorMiddleware, notificationMiddleware, loadingBarMiddleware(), translationMiddleware, loggerMiddleware),
+    }).concat(errorMiddleware, notificationMiddleware, loadingBarMiddleware(), loggerMiddleware),
 });
 
 const getStore = () => store;

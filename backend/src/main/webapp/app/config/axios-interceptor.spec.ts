@@ -18,14 +18,13 @@ describe('Axios Interceptor', () => {
       expect((client.interceptors.response as any).handlers[0].fulfilled({ data: 'foo' })).toEqual({ data: 'foo' });
     });
     it('onResponseError is called on rejected response', () => {
-      const rejectError = {
+      (client.interceptors.response as any).handlers[0].rejected({
         response: {
           statusText: 'NotFound',
           status: 403,
           data: { message: 'Page not found' },
         },
-      };
-      expect((client.interceptors.response as any).handlers[0].rejected(rejectError)).rejects.toEqual(rejectError);
+      });
       expect(onUnauthenticated.calledOnce).toBe(true);
     });
   });

@@ -41,7 +41,7 @@ public class TestSecurityConfiguration {
             .withRegistrationId("oidc")
             .issuerUri("{baseUrl}")
             .redirectUri("{baseUrl}/{action}/oauth2/code/{registrationId}")
-            .clientAuthenticationMethod(ClientAuthenticationMethod.CLIENT_SECRET_BASIC)
+            .clientAuthenticationMethod(ClientAuthenticationMethod.BASIC)
             .authorizationGrantType(AuthorizationGrantType.AUTHORIZATION_CODE)
             .scope("read:user")
             .authorizationUri("https://jhipster.org/login/oauth/authorize")

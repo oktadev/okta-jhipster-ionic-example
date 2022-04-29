@@ -85,15 +85,14 @@ export const PhotoSlice = createEntitySlice({
         state.entity = {};
       })
       .addMatcher(isFulfilled(getEntities), (state, action) => {
-        const { data, headers } = action.payload;
-        const links = parseHeaderForLinks(headers.link);
+        const links = parseHeaderForLinks(action.payload.headers.link);
 
         return {
           ...state,
           loading: false,
           links,
-          entities: loadMoreDataWhenScrolled(state.entities, data, links),
-          totalItems: parseInt(headers['x-total-count'], 10),
+          entities: loadMoreDataWhenScrolled(state.entities, action.payload.data, links),
+          totalItems: parseInt(action.payload.headers['x-total-count'], 10),
         };
       })
       .addMatcher(isFulfilled(createEntity, updateEntity, partialUpdateEntity), (state, action) => {
