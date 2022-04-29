@@ -10,6 +10,7 @@ import { IonicModule } from '@ionic/angular';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UserService } from '../../../services/user/user.service';
 import { PhotoUpdatePage } from './photo-update';
+import { Camera } from '@ionic-native/camera/ngx';
 
 describe('PhotoUpdatePage', () => {
   let component: PhotoUpdatePage;
@@ -37,11 +38,12 @@ describe('PhotoUpdatePage', () => {
         RouterTestingModule,
         FormsModule,
         ReactiveFormsModule,
-        IonicModule,
+        IonicModule
       ],
       providers: [
         { provide: ActivatedRoute, useValue: activatedRouteMock },
         { provide: UserService, useValue: userServiceMock },
+        Camera
       ],
     }).compileComponents();
   }));
