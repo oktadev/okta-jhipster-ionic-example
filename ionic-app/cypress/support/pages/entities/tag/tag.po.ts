@@ -1,11 +1,11 @@
 import { EntityComponentsPage, EntityDetailPage, EntityUpdatePage } from '../../entity.po';
 
 export class TagComponentsPage extends EntityComponentsPage {
-  pageSeletor = 'page-tag';
+  pageSelector = 'page-tag';
 }
 
 export class TagUpdatePage extends EntityUpdatePage {
-  pageSeletor = 'page-tag-update';
+  pageSelector = 'page-tag-update';
 
   setNameInput(name: string) {
     this.setInputValue('name', name);
@@ -13,7 +13,7 @@ export class TagUpdatePage extends EntityUpdatePage {
 }
 
 export class TagDetailPage extends EntityDetailPage {
-  pageSeletor = 'page-tag-detail';
+  pageSelector = 'page-tag-detail';
 
   getNameContent() {
     return cy.get('#name-content');

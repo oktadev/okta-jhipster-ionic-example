@@ -1,4 +1,4 @@
-import { userUsername, userPassword } from '../../../support/config';
+import { USER_USERNAME, USER_PASSWORD } from '../../../support/config';
 import { AlbumComponentsPage, AlbumDetailPage, AlbumUpdatePage } from '../../../support/pages/entities/album/album.po';
 import albumSample from './album.json';
 
@@ -17,7 +17,7 @@ describe('Album entity', () => {
 
   beforeEach(() => {
     album = undefined;
-    cy.login(userUsername, userPassword);
+    cy.login(USER_USERNAME, USER_PASSWORD);
   });
 
   describe('navigation test', () => {

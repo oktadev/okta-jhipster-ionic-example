@@ -7,13 +7,13 @@ export const environment = {
   production: false,
   apiUrl: `${apiHost}api`,
   oidcConfig: {
-    client_id: 'web_app',
+    client_id: '0oa4w1hm2m9UyvfOQ5d7',
     server_host: 'http://localhost:9080/auth/realms/jhipster',
     redirect_url: window.location.origin + '/callback',
     end_session_redirect_url: window.location.origin + '/logout',
     scopes: 'openid profile',
     pkce: true,
-    audience: 'https://dev-06bzs1cu.us.auth0.com/api/v2/',
+    audience: 'api://default',
   },
   scheme: 'dev.localhost.ionic:/',
 };

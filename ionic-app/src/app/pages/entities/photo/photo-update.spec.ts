@@ -8,6 +8,7 @@ import { ActivatedRoute } from '@angular/router';
 import { of } from 'rxjs';
 import { IonicModule } from '@ionic/angular';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { Camera } from '@ionic-native/camera/ngx';
 import { UserService } from '../../../services/user/user.service';
 import { PhotoUpdatePage } from './photo-update';
 
@@ -39,10 +40,7 @@ describe('PhotoUpdatePage', () => {
         ReactiveFormsModule,
         IonicModule,
       ],
-      providers: [
-        { provide: ActivatedRoute, useValue: activatedRouteMock },
-        { provide: UserService, useValue: userServiceMock },
-      ],
+      providers: [{ provide: ActivatedRoute, useValue: activatedRouteMock }, { provide: UserService, useValue: userServiceMock }, Camera],
     }).compileComponents();
   }));
 

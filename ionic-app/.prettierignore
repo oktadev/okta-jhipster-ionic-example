@@ -4,5 +4,5 @@ package-lock.json
 
 # ionic rules:
 .angular
-cypress/screnshots
-cyresss/videos
+cypress/screenshots
+cypress/videos

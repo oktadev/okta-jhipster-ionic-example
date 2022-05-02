@@ -73,6 +73,7 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
+            "port": 8100,
             "browserTarget": "app:build"
           },
           "configurations": {
@@ -129,9 +130,7 @@
           "builder": "@cypress/schematic:cypress",
           "options": {
             "devServerTarget": "app:serve",
-            "watch": true,
-            "headless": false,
-            "browserTarget": "chrome"
+            "browser": "chrome"
           },
           "configurations": {
             "production": {
@@ -163,14 +162,16 @@
             }
           }
         },
-        "cypress-run": {
+        "cypress-open": {
           "builder": "@cypress/schematic:cypress",
           "options": {
             "devServerTarget": "app:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "app:serve:production"
+              "devServerTarget": "app:serve:production",
+              "watch": true,
+              "headless": false
             }
           }
         },

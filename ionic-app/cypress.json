@@ -4,10 +4,10 @@
   "integrationFolder": "cypress/integration",
   "supportFile": "cypress/support/index.ts",
   "videosFolder": "cypress/videos",
+  "video": false,
   "screenshotsFolder": "cypress/screenshots",
   "pluginsFile": "cypress/plugins/index.ts",
   "fixturesFolder": "cypress/fixtures",
   "testFiles": "**/*.e2e-spec.ts",
-  "experimentalSessionAndOrigin": true,
-  "video": false
+  "experimentalSessionAndOrigin": true
 }

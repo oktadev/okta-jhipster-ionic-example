@@ -1,4 +1,4 @@
-import { userUsername, userPassword } from '../../../support/config';
+import { USER_USERNAME, USER_PASSWORD } from '../../../support/config';
 import { PhotoComponentsPage, PhotoDetailPage, PhotoUpdatePage } from '../../../support/pages/entities/photo/photo.po';
 import photoSample from './photo.json';
 
@@ -17,7 +17,7 @@ describe('Photo entity', () => {
 
   beforeEach(() => {
     photo = undefined;
-    cy.login(userUsername, userPassword);
+    cy.login(USER_USERNAME, USER_PASSWORD);
   });
 
   describe('navigation test', () => {
