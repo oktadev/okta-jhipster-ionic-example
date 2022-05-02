@@ -62,12 +62,11 @@ const login = (username: string, password: string) => {
             authorization_endpoint,
             {
               args: { authorization_endpoint, username, password },
-              // eslint-disable-next-line @typescript-eslint/no-shadow
-            },
+            }, // eslint-disable-next-line @typescript-eslint/no-shadow
             ({ authorization_endpoint, username, password }) => {
               let usernameElement = 'username';
               let passwordElement = 'password';
-              if (authorization_endpoint.includes('okta') && cy.get('input[name="identifier"]') != null) {
+              if (authorization_endpoint.includes('okta')) {
                 usernameElement = 'identifier';
                 passwordElement = 'credentials.passcode';
               }
