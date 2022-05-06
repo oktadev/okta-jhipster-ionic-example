@@ -16,6 +16,7 @@ export class AuthConfigService {
       .toPromise()
       .then(data => {
         this.authConfig = data;
+        // Special handling for Auth0
         if (this.authConfig.issuer.endsWith('/')) {
           this.authConfig.issuer = this.authConfig.issuer.substring(0, this.authConfig.issuer.length - 1);
         }

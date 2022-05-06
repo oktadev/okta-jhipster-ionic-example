@@ -1,5 +1,5 @@
 {
-  "name": "oauth2Ionic",
+  "name": "flickr2Ionic",
   "integrations": {
     "capacitor": {}
   },

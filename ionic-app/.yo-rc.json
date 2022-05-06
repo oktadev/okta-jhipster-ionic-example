@@ -1,7 +1,7 @@
 {
   "generator-jhipster": {
     "authenticationType": "oauth2",
-    "baseName": "oauth2Ionic",
+    "baseName": "flickr2Ionic",
     "blueprints": [
       {
         "name": "generator-jhipster-ionic",
@@ -17,7 +17,8 @@
       }
     ],
     "prettierDefaultIndent": 2,
-    "projectName": "flickr2"
+    "projectName": "Flickr 2Ionic",
+    "skipCommitHook": true
   },
   "generator-jhipster-ionic": {
     "appDir": "../backend",

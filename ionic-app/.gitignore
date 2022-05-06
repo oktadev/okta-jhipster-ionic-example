@@ -112,6 +112,7 @@ Desktop.ini
 ######################
 .angular
 
-# ionic rules:
+# Ionic rules:
 cypress/screenshots
 cypress/videos
+public

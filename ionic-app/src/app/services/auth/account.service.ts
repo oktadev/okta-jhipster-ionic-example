@@ -116,4 +116,8 @@ export class AccountService {
   getImageUrl(): string {
     return this.isIdentityResolved() ? this.userIdentity.imageUrl : null;
   }
+
+  getLogoutUrl(): Observable<HttpResponse<any>> {
+    return this.http.post(ApiService.API_URL + '/logout', {}, { observe: 'response' });
+  }
 }

@@ -1,21 +1,26 @@
+/* eslint-disable @typescript-eslint/naming-convention */
 // This file can be replaced during build by using the `fileReplacements` array.
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
+import type { IAuthConfig } from 'ionic-appauth';
+
 export const apiHost = 'http://localhost:8080/';
+
+const oidcConfig: IAuthConfig = {
+  client_id: 'web_app', // auth0: Tz7nrQ36DkcKmtuDMTZfi76tVMn7LDge, okta: 0oa4y67wyllNCJrDZ5d7
+  server_host: 'http://localhost:9080/auth/realms/jhipster',
+  redirect_url: window.location.origin + '/callback',
+  end_session_redirect_url: window.location.origin + '/logout',
+  scopes: 'openid profile',
+  pkce: true,
+};
 
 export const environment = {
   production: false,
   apiUrl: `${apiHost}api`,
-  oidcConfig: {
-    client_id: 'web_app', // auth0: Tz7nrQ36DkcKmtuDMTZfi76tVMn7LDge, okta: 0oa4vbaol4vm9x7pu5d7
-    server_host: 'http://localhost:9080/auth/realms/jhipster',
-    redirect_url: window.location.origin + '/callback',
-    end_session_redirect_url: window.location.origin + '/logout',
-    scopes: 'openid profile',
-    pkce: true,
-    audience: 'api://default', // auth0: https://dev-06bzs1cu.us.auth0.com/api/v2/
-  },
-  scheme: 'dev.localhost.ionic:/',
+  oidcConfig,
+  audience: 'api://default', // auth0: https://dev-06bzs1cu.us.auth0.com/api/v2/
+  scheme: 'dev.localhost.ionic',
 };
 
 /*

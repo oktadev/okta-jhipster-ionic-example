@@ -1,8 +1,10 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { NavController } from '@ionic/angular';
+import { NavController, Platform } from '@ionic/angular';
 import { AuthActions, AuthService, IAuthAction } from 'ionic-appauth';
 import { Subscription } from 'rxjs';
 import { environment } from '../../../environments/environment';
+
+const { audience } = environment;
 
 @Component({
   selector: 'app-login',
@@ -14,7 +16,7 @@ export class LoginPage implements OnInit, OnDestroy {
   events$ = this.authService.events$;
   sub: Subscription;
 
-  constructor(private authService: AuthService, private navCtrl: NavController) {}
+  constructor(private authService: AuthService, private navCtrl: NavController, private platform: Platform) {}
 
   async ngOnInit() {
     this.sub = this.authService.events$.subscribe(action => this.onSignInSuccess(action));
@@ -25,7 +27,7 @@ export class LoginPage implements OnInit, OnDestroy {
   }
 
   public async signIn() {
-    await this.authService.signIn({ audience: environment.oidcConfig.audience });
+    await this.authService.signIn({ audience });
   }
 
   private async onSignInSuccess(action: IAuthAction) {
