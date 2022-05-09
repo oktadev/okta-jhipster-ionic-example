@@ -34,8 +34,9 @@ export class HomePage implements OnInit {
     await this.loginService.logout();
     this.goBackToHomePage();
     // special handling for Auth0 and Okta; it breaks logout for Keycloak
-    if (!environment.oidcConfig.server_host.includes('jhipster')) {
-      window.location.reload();
+    if (this.platform.is('capacitor') &&
+      !environment.oidcConfig.server_host.includes('jhipster')) {
+      window.location.reload(); // enabling fails with Keycloak and iOS
     }
   }
 
