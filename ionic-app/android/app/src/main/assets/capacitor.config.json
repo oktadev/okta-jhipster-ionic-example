@@ -1,6 +1,6 @@
 {
 	"appId": "io.ionic.starter",
-	"appName": "flickr2Ionic",
+	"appName": "flickr2",
 	"webDir": "www",
 	"bundledWebRuntime": false
 }

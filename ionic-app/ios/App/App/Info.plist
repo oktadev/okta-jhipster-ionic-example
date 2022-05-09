@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
-        <string>flickr2Ionic</string>
+  <string>flickr2</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -20,18 +20,18 @@
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
-<key>CFBundleURLTypes</key>
-<array>
-  <dict>
-    <key>CFBundleURLName</key>
-    <string>com.getcapacitor.capacitor</string>
-    <key>CFBundleURLSchemes</key>
-    <array>
-      <string>capacitor</string>
-      <string>dev.localhost.ionic</string>
-    </array>
-  </dict>
-</array>
+  <key>CFBundleURLTypes</key>
+  <array>
+    <dict>
+      <key>CFBundleURLName</key>
+      <string>com.getcapacitor.capacitor</string>
+      <key>CFBundleURLSchemes</key>
+      <array>
+        <string>capacitor</string>
+        <string>dev.localhost.ionic</string>
+      </array>
+    </dict>
+  </array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSAppTransportSecurity</key>

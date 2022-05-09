@@ -1,7 +1,7 @@
 {
   "generator-jhipster": {
     "authenticationType": "oauth2",
-    "baseName": "flickr2Ionic",
+    "baseName": "flickr2",
     "blueprints": [
       {
         "name": "generator-jhipster-ionic",
