@@ -1,5 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { NavController, Platform } from '@ionic/angular';
+import { NavController } from '@ionic/angular';
 import { AuthActions, AuthService, IAuthAction } from 'ionic-appauth';
 import { Subscription } from 'rxjs';
 import { environment } from '../../../environments/environment';
@@ -16,7 +16,7 @@ export class LoginPage implements OnInit, OnDestroy {
   events$ = this.authService.events$;
   sub: Subscription;
 
-  constructor(private authService: AuthService, private navCtrl: NavController, private platform: Platform) {}
+  constructor(private authService: AuthService, private navCtrl: NavController) {}
 
   async ngOnInit() {
     this.sub = this.authService.events$.subscribe(action => this.onSignInSuccess(action));

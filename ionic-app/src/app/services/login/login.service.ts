@@ -5,12 +5,15 @@ import { AuthService, Browser } from 'ionic-appauth';
 import { environment } from '../../../environments/environment';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class LoginService {
-  constructor(private accountService: AccountService, private authService: AuthService,
-              private translate: TranslateService, private browser: Browser) {
-  }
+  constructor(
+    private accountService: AccountService,
+    private authService: AuthService,
+    private translate: TranslateService,
+    private browser: Browser
+  ) {}
 
   login() {
     this.authService
@@ -30,7 +33,6 @@ export class LoginService {
   }
 
   async logout() {
-
     await this.authService.signOut();
     this.accountService.authenticate(null);
 

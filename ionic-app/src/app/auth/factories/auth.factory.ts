@@ -12,7 +12,6 @@ export const authFactory = (platform: Platform, ngZone: NgZone, requestor: Reque
     environment.oidcConfig.scopes += ' offline_access';
     environment.oidcConfig.redirect_url = `${environment.scheme}:/callback`;
     environment.oidcConfig.end_session_redirect_url = `${environment.scheme}:/logout`;
-    console.log('set end session to ', environment.oidcConfig.end_session_redirect_url);
   }
   authService.authConfig = environment.oidcConfig;
 
