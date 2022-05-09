@@ -85,7 +85,8 @@ const login = (username: string, password: string) => {
                 cy.get(`input[name="password"]`).type(password);
               }
               cy.get('[type="submit"]').first().click();
-            });
+            }
+          );
           cy.url({ timeout: 10000 }).should('eq', Cypress.config().baseUrl + 'tabs/home');
         }
       });
