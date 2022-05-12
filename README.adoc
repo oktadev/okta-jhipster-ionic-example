@@ -4,7 +4,7 @@
 
 This example app shows you how to create an Ionic app you can deploy as a SPA, PWA, or mobile app on iOS and Android! Please read https://developer.okta.com/blog/2022/05/12/ionic-angular-jhipster[Build Secure Ionic Apps with Angular and JHipster] to see how it was created.
 
-*Table of Contents:*
+*Prerequisites:* https://nodejs.org[Node 16], https://sdkman.io/[Java 11], and https://docs.docker.com/desktop/#download-and-install[Docker Desktop]
 
 - link:#getting-started[Getting Started]
 - link:#links[Links]
@@ -15,12 +15,6 @@ This example app shows you how to create an Ionic app you can deploy as a SPA, P
 > https://developer.okta.com/[Okta] has authentication and user management APIs that reduce development time with instant-on, scalable user infrastructure.
 >
 > https://github.com/mraible[@mraible]'s recommendation: use Okta for this tutorial because the https://cli.okta.com[Okta CLI] automates most of it for you!
-
-*Prerequisites:*
-
-- https://nodejs.org[Node 16]
-- https://sdkman.io/[Java 11]
-- https://docs.docker.com/desktop/#download-and-install[Docker Desktop]
 
 == Getting Started
 
