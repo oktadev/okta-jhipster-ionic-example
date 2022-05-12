@@ -7,7 +7,7 @@ import type { IAuthConfig } from 'ionic-appauth';
 export const apiHost = 'http://localhost:8080/';
 
 const oidcConfig: IAuthConfig = {
-  client_id: 'web_app', // auth0: Tz7nrQ36DkcKmtuDMTZfi76tVMn7LDge, okta: 0oa4y67wyllNCJrDZ5d7, oie: 0oa4vbaol4vm9x7pu5d7
+  client_id: 'web_app',
   server_host: 'http://localhost:9080/auth/realms/jhipster',
   redirect_url: window.location.origin + '/callback',
   end_session_redirect_url: window.location.origin + '/logout',
@@ -19,7 +19,7 @@ export const environment = {
   production: false,
   apiUrl: `${apiHost}api`,
   oidcConfig,
-  audience: 'api://default', // auth0: https://dev-06bzs1cu.us.auth0.com/api/v2/
+  audience: 'api://default',
   scheme: 'dev.localhost.ionic',
 };
 
