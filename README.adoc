@@ -1,3 +1,77 @@
-= Ionic and Spring Boot Example
+= Ionic, Angular, and JHipster Example 🤓
 
-> Built with JHipster 7.8.1 and JHipster Ionic 7.5.0
+> Built with JHipster Ionic 8.0.0
+
+This example app shows you how to create an Ionic app you can deploy as a SPA, PWA, or mobile app on iOS and Android! Please read https://developer.okta.com/blog/2022/05/12/ionic-angular-jhipster[Build Secure Ionic Apps with Angular and JHipster] to see how it was created.
+
+> Okta and Auth0 are on the https://auth0.com/blog/raising-the-bar-on-identity-one-year-of-okta-auth0/[same team now], so this example shows you how to use both. https://auth0.com[Auth0] is an easy to implement, adaptable authentication and authorization platform. Basically, we make your login box awesome.
+> https://developer.okta.com/[Okta] has authentication and user management APIs that reduce development time with instant-on, scalable user infrastructure. 
+>
+> https://github.com/mraible[@mraible]'s recommendation: use Okta for this tutorial because the https://cli.okta.com[Okta CLI] automates most of it for you!
+
+*Table of Contents:*
+
+- link:#getting-started[Getting Started]
+- link:#links[Links]
+- link:#help[Help]
+- link:#license[License]
+
+*Prerequisites:*
+
+- https://nodejs.org[Node 16]
+- https://sdkman.io/[Java 11]
+- https://docs.docker.com/desktop/#download-and-install[Docker Desktop]
+
+== Getting Started
+
+To install this example, clone this repository.
+
+```
+git clone https://github.com/oktadev/okta-jhipster-ionic-example.git \
+  jhipster-ionic --depth 1
+cd jhipster-ionic/backend
+```
+
+Start the Spring Boot backend:
+
+[source,shell]
+----
+npm run ci:e2e:prepare # starts Keycloak and PostgreSQL in Docker
+./mvnw
+----
+
+Then, navigate to `\http://localhost:8080` in your favorite browser.
+Sign in with `admin/admin` credentials and rejoice when it all works.
+
+Open a new terminal window and enter the `jhipster-ionic/ionic-app` directory.
+Install its dependencies and run `npm start` to test the Ionic client.
+
+[source,shell]
+----
+npm install
+npm start
+----
+
+You should be able to sign in and add a new photo. See how JHipster made all of this possible in https://developer.okta.com/blog/2022/05/12/ionic-angular-jhipster#how-to-integrate-ionic-and-spring-boot[How to integrate Ionic and Spring Boot].
+
+Deploy your app to https://developer.okta.com/blog/2022/05/12/ionic-angular-jhipster#run-your-ionic-app-on-ios-using-capacitor[iOS] and https://developer.okta.com/blog/2022/05/12/ionic-angular-jhipster#run-your-ionic-app-on-android[Android]. Then, try switching your identity provider to https://developer.okta.com/blog/2022/05/12/ionic-angular-jhipster#switch-your-identity-provider-to-okta[Okta] 
+and https://developer.okta.com/blog/2022/05/12/ionic-angular-jhipster#switch-your-identity-provider-to-auth0[Auth0].
+
+== Links
+
+This example uses the following open source libraries:
+
+- https://ionicframework.com/[Ionic Framework]
+- https://angular.io/[Angular]
+- https://www.jhipster.tech[JHipster]
+- https://spring.io/projects/spring-boot[Spring Boot]
+- https://spring.io/projects/spring-security[Spring Security]
+
+== Help
+
+Please post any questions as comments on the https://developer.okta.com/blog/2022/05/12/ionic-angular-jhipster[blog post].
+
+== License
+
+Apache 2.0, see link:LICENSE[LICENSE].
+
