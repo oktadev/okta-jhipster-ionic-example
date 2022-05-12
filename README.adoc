@@ -1,4 +1,4 @@
-= Ionic, Angular, and JHipster Example 🤓
+= Ionic, Angular, and JHipster Example ✨
 
 > Built with https://github.com/jhipster/generator-jhipster-ionic/releases/tag/v8.0.0[JHipster Ionic 8.0.0]
 
