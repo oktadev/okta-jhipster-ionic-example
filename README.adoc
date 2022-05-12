@@ -4,17 +4,17 @@
 
 This example app shows you how to create an Ionic app you can deploy as a SPA, PWA, or mobile app on iOS and Android! Please read https://developer.okta.com/blog/2022/05/12/ionic-angular-jhipster[Build Secure Ionic Apps with Angular and JHipster] to see how it was created.
 
-> Okta and Auth0 are on the https://auth0.com/blog/raising-the-bar-on-identity-one-year-of-okta-auth0/[same team now], so this example shows you how to use both. https://auth0.com[Auth0] is an easy to implement, adaptable authentication and authorization platform. Basically, we make your login box awesome.
-> https://developer.okta.com/[Okta] has authentication and user management APIs that reduce development time with instant-on, scalable user infrastructure. 
->
-> https://github.com/mraible[@mraible]'s recommendation: use Okta for this tutorial because the https://cli.okta.com[Okta CLI] automates most of it for you!
-
 *Table of Contents:*
 
 - link:#getting-started[Getting Started]
 - link:#links[Links]
 - link:#help[Help]
 - link:#license[License]
+
+> Okta and Auth0 are on the https://auth0.com/blog/raising-the-bar-on-identity-one-year-of-okta-auth0/[same team now], so this example shows you how to use both. https://auth0.com[Auth0] is an easy to implement, adaptable authentication and authorization platform. Basically, we make your login box awesome.
+> https://developer.okta.com/[Okta] has authentication and user management APIs that reduce development time with instant-on, scalable user infrastructure.
+>
+> https://github.com/mraible[@mraible]'s recommendation: use Okta for this tutorial because the https://cli.okta.com[Okta CLI] automates most of it for you!
 
 *Prerequisites:*
 
@@ -54,7 +54,7 @@ npm start
 
 You should be able to sign in and add a new photo. See how JHipster made all of this possible in https://developer.okta.com/blog/2022/05/12/ionic-angular-jhipster#how-to-integrate-ionic-and-spring-boot[How to integrate Ionic and Spring Boot].
 
-Deploy your app to https://developer.okta.com/blog/2022/05/12/ionic-angular-jhipster#run-your-ionic-app-on-ios-using-capacitor[iOS] and https://developer.okta.com/blog/2022/05/12/ionic-angular-jhipster#run-your-ionic-app-on-android[Android]. Then, try switching your identity provider to https://developer.okta.com/blog/2022/05/12/ionic-angular-jhipster#switch-your-identity-provider-to-okta[Okta] 
+Deploy your app to https://developer.okta.com/blog/2022/05/12/ionic-angular-jhipster#run-your-ionic-app-on-ios-using-capacitor[iOS] and https://developer.okta.com/blog/2022/05/12/ionic-angular-jhipster#run-your-ionic-app-on-android[Android]. Then, try switching your identity provider to https://developer.okta.com/blog/2022/05/12/ionic-angular-jhipster#switch-your-identity-provider-to-okta[Okta]
 and https://developer.okta.com/blog/2022/05/12/ionic-angular-jhipster#switch-your-identity-provider-to-auth0[Auth0].
 
 == Links
